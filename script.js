@@ -9,7 +9,7 @@ async function init() {
         document.getElementById('loader').style.display = 'none';
         renderDashboard(data);
     } catch (error) {
-        document.getElementById('loader').innerText = 'Ошибка загрузки данных. Проверьте консоль.';
+        document.getElementById('loader').innerText = 'Помилка завантаження даних';
         console.error('Ошибка при получении данных:', error);
     }
 }
