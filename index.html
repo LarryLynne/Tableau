@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Табло</title>
-    <!-- Подключаем файл стилей -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 class="main-title">План-факт приїзду авто та ШК</h1>
 
+    <div class="controls-container">
+        <select id="sheet-select" style="display: none;"></select>
+        <button id="toggle-view-btn" style="display: none;" onclick="toggleView()">Показати графік</button>
+    </div>
+
     <div id="loader">Завантаження...</div>
     
-    <!-- Сюда сгенерируются кнопки вкладок -->
-    <div class="tabs" id="tabs-container"></div>
-    
-    <!-- Сюда сгенерируются сами таблицы -->
     <div id="tables-container"></div>
 
-    <!-- Подключаем скрипт в самом конце body -->
+    <div id="chart-container" style="display: none;">
+        <canvas id="myChart"></canvas>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
